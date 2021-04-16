@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:configChanges="orientation|screenSize|keyboardHidden"
+    tools:context=".VideoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="244dp">
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="236dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#b4d9f3">
+
+        <TextView
+            android:id="@+id/tv_current"
+            android:text="00:00"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"  />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/tv_current" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@+id/seekBar"
+            android:text="00:00" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#c99f9e9e">
+
+        <Button
+            android:id="@+id/buttonPlay"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="Play"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/buttonSwitch"
+            android:text="switch"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/buttonResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/buttonResume"
+            android:text="Resume"
+            android:layout_toLeftOf="@+id/buttonStop"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/buttonStop"
+            android:text="Stop"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>
